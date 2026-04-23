@@ -1629,10 +1629,10 @@ export default function App() {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'CV', href: '#cv' },
     { name: 'Research', href: '#research' },
     { name: 'Vision', href: '#vision' },
     { name: 'Skills & Certificates', href: '#skills' },
+    { name: 'CV', href: '#cv' },
     { name: 'Contact', href: '#contact' },
   ];
 

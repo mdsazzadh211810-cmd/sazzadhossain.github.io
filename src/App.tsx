@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Award, BookOpen, Twitter, Facebook, MessageCircle, GraduationCap, Phone, Microscope, Leaf, Cpu, ChevronDown, Download, ArrowLeft, ArrowRight, Network, Beaker, FileText, Languages } from 'lucide-react';
 
 // ============================================================================
@@ -808,6 +809,42 @@ const EXTRACURRICULARS = [
       bn: "চীনে বসবাসরত আন্তর্জাতিক শিক্ষার্থীদের জন্য বিভিন্ন একাডেমিক কর্মশালা (Academic Workshops) এবং সাংস্কৃতিক বিনিময় (Cultural Exchange) অনুষ্ঠানের আয়োজন করতে সহায়তা করছি।",
       zh: "协助为在华国际留学生组织学术工作坊和文化交流活动。"
     }
+  },
+  {
+    id: 3,
+    title: {
+      en: "Volunteer for Bangladesh (VBD) - Jaago Foundation",
+      bn: "ভলেন্টিয়ার ফর বাংলাদেশ (VBD) - জাগো ফাউন্ডেশন",
+      zh: "孟加拉国志愿者 (VBD) - Jaago 基金会"
+    },
+    role: {
+      en: "General Volunteer | Jan 2021 - Dec 2023",
+      bn: "সাধারণ স্বেচ্ছাসেবী | জানুয়ারি ২০২১ - ডিসেম্বর ২০২৩",
+      zh: "普通志愿者 | 2021年1月 - 2023年12月"
+    },
+    description: {
+      en: "Worked as a general volunteer for an extended period, contributing to various social and community development activities.",
+      bn: "দীর্ঘদিন যাবত একজন সাধারণ ভলেন্টিয়ার হিসেবে কাজ করেছি এবং সমাজের উন্নয়নে বিভিন্ন কার্যক্রমে অবদান রেখেছি।",
+      zh: "长期担任普通志愿者，为各种社会和社区发展活动作出贡献。"
+    }
+  },
+  {
+    id: 4,
+    title: {
+      en: "Lions Clubs International",
+      bn: "লায়ন্স ক্লাব ইন্টারন্যাশনাল",
+      zh: "国际狮子会"
+    },
+    role: {
+      en: "Member, Child Cancer Division (Volunteerism) | Nov 2024 - Present",
+      bn: "সদস্য, চাইল্ড ক্যান্সার ডিভিশন | নভেম্বর ২০২৪ - বর্তমান",
+      zh: "会员，儿童癌症分部（志愿服务）| 2024年11月 - 至今"
+    },
+    description: {
+      en: "Actively working as a volunteer to support the Child Cancer Division's initiatives and community-driven efforts.",
+      bn: "চাইল্ড ক্যান্সার ডিভিশনের একজন মেম্বার হিসেবে ভলেন্টিয়ার অরিজমের কাজ করতেছি।",
+      zh: "积极作为志愿者，支持儿童癌症分部的倡议和社区驱动的努力。"
+    }
   }
 ];
 
@@ -820,7 +857,9 @@ const SKILLS_DATA = [
       zh: "CRISPR-Cas9 基因编辑"
     },
     source: "Coursera",
-    sourceUrl: "https://www.coursera.org",
+    sourceUrl: "https://www.coursera.org/learn/genetic-engineering",
+    videoUrl: "https://www.youtube.com/embed/videoseries?list=PLKni9g7-jPPlc_XqEvWfuFKhQqPF-qDUE",
+    playlistUrl: "https://youtube.com/playlist?list=PLKni9g7-jPPlc_XqEvWfuFKhQqPF-qDUE",
     description: {
       en: "Learned the fundamental mechanisms of CRISPR-Cas9 and its applications in plant biotechnology.",
       bn: "ক্রিসপার-ক্যাস৯ এর মৌলিক প্রক্রিয়া এবং প্ল্যান্ট বায়োটেকনোলজিতে এর ব্যবহার সম্পর্কে বিস্তারিত শিখেছি।",
@@ -835,7 +874,9 @@ const SKILLS_DATA = [
       zh: "面向生物信息的 Python 编程"
     },
     source: "Udemy",
-    sourceUrl: "https://www.udemy.com",
+    sourceUrl: "https://www.udemy.com/course/python-for-biology/",
+    videoUrl: "https://www.youtube.com/embed/videoseries?list=PLe1-kjuYBZ07-9C2ntn_G81g59ZEK7KNc",
+    playlistUrl: "https://www.youtube.com/playlist?list=PLe1-kjuYBZ07-9C2ntn_G81g59ZEK7KNc",
     description: {
       en: "Mastered Python scripting for analyzing genomic sequences and biological data.",
       bn: "জিনোমিক সিকোয়েন্স এবং জৈবিক ডেটা বিশ্লেষণের জন্য পাইথন স্ক্রিপ্টিং আয়ত্ত করেছি।",
@@ -850,7 +891,9 @@ const SKILLS_DATA = [
       zh: "农业中的机器学习"
     },
     source: "edX",
-    sourceUrl: "https://www.edx.org",
+    sourceUrl: "https://www.edx.org/course/machine-learning-in-agriculture",
+    videoUrl: "https://www.youtube.com/embed/videoseries?list=PLfwxMKnHA3iFefxdvB-o0SyclwtT6Z1O7",
+    playlistUrl: "https://www.youtube.com/playlist?list=PLfwxMKnHA3iFefxdvB-o0SyclwtT6Z1O7",
     description: {
       en: "Explored how AI and ML models can predict crop yields and optimize farming practices.",
       bn: "কীভাবে এআই এবং এমএল মডেলগুলো ফসলের ফলন সম্পর্কে ভবিষ্যদ্বাণী করতে পারে এবং চাষাবাদ প্রক্রিয়াকে অপ্টিমাইজ করতে পারে, সে বিষয়ে গবেষণা করেছি।",
@@ -1573,14 +1616,14 @@ export default function App() {
         setShowCVPage(true);
         setShowProjectsPage(false);
         setActiveSection('cv');
-        window.scrollTo(0, 0);
+        setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 200);
       } else if (hash.startsWith('#project-')) {
         const id = parseInt(hash.replace('#project-', ''));
         setSelectedProject(id);
         setShowProjectsPage(true);
         setShowCVPage(false);
         setActiveSection('research');
-        window.scrollTo(0, 0);
+        setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 200);
       } else {
         setShowCVPage(false);
         setShowProjectsPage(false);
@@ -1607,7 +1650,7 @@ export default function App() {
               setActiveSection('home');
             }
           }
-        }, 50);
+        }, 300);
       }
     };
 
@@ -1816,17 +1859,34 @@ export default function App() {
                 key={link.name} 
                 href={link.href} 
                 onClick={(e) => {
+                  e.preventDefault();
                   closeMenu();
+                  if (link.name === 'Research') {
+                    setIsResearchExpanded(true);
+                  }
+                  
+                  // Update URL visually without jumping
+                  window.history.pushState(null, '', link.href);
+
                   if (showCVPage || showProjectsPage) {
                     setShowCVPage(false);
                     setShowProjectsPage(false);
+                    // allow unmount animation before scroll
                     setTimeout(() => {
                       const element = document.querySelector(link.href);
-                      if (element) element.scrollIntoView();
-                    }, 100);
-                  }
-                  if (link.name === 'Research') {
-                    setIsResearchExpanded(true);
+                      if (element) {
+                        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                        window.scrollTo({ top: elementPosition - 80, behavior: 'smooth' });
+                      }
+                      setActiveSection(link.href.substring(1));
+                    }, 400); // Wait for transition
+                  } else {
+                    const element = document.querySelector(link.href);
+                    if (element) {
+                      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                      window.scrollTo({ top: elementPosition - 80, behavior: 'smooth' });
+                    }
+                    setActiveSection(link.href.substring(1));
                   }
                 }}
                 className={`transition-colors whitespace-nowrap hover:scale-105 transform duration-200 ${activeSection === link.href.substring(1) ? 'text-blue-600 font-bold' : 'text-slate-600 hover:text-blue-600'}`}
@@ -1838,16 +1898,22 @@ export default function App() {
         </div>
       </nav>
 
-      {showCVPage && (
-        <CVPage onClose={() => window.history.back()} lang={lang} />
-      )}
-      
-      {showProjectsPage && (
-        <ProjectsPage onClose={() => window.history.back()} currentProjectId={selectedProject} setCurrentProjectId={setSelectedProject} lang={lang} />
-      )}
+      <AnimatePresence mode="wait">
+        {showCVPage && (
+          <motion.div key="cv" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -30 }} transition={{ duration: 0.4, ease: "easeOut" }}>
+            <CVPage onClose={() => window.history.back()} lang={lang} />
+          </motion.div>
+        )}
+        
+        {showProjectsPage && (
+          <motion.div key="projects" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -30 }} transition={{ duration: 0.4, ease: "easeOut" }}>
+            <ProjectsPage onClose={() => window.history.back()} currentProjectId={selectedProject} setCurrentProjectId={setSelectedProject} lang={lang} />
+          </motion.div>
+        )}
 
-      <div className={showCVPage || showProjectsPage ? 'hidden' : 'block'}>
-        <main>
+        {!(showCVPage || showProjectsPage) && (
+          <motion.div key="main" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} className="block">
+            <main>
           {/* Hero Section */}
         <section id="home" className="pt-40 pb-20 md:pt-52 md:pb-32 px-6 md:px-12 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
           <div className="flex-1 text-center md:text-left">
@@ -2383,7 +2449,7 @@ export default function App() {
                           >
                             <h4 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">{skill.title[lang]}</h4>
                             <p className="text-blue-600 text-sm font-medium mb-3 flex items-center gap-1">
-                              <BookOpen size={14} /> {lang === 'en' ? 'Learned from' : lang === 'bn' ? 'শেখা হয়েছে এখান থেকে' : '学习来源'} {skill.source[lang]}
+                              <BookOpen size={14} /> {lang === 'en' ? 'Learned from' : lang === 'bn' ? 'শেখা হয়েছে এখান থেকে' : '学习来源'} {skill.source}
                             </p>
                             <p className="text-slate-600 text-sm leading-relaxed line-clamp-2">{skill.description[lang]}</p>
                             <div className="mt-4 flex items-center text-sm font-medium text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -2497,7 +2563,9 @@ export default function App() {
           </div>
         </section>
       </main>
-      </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-12 px-6 md:px-12 text-center">
@@ -2590,16 +2658,26 @@ export default function App() {
                 <div className="flex flex-wrap items-center gap-4 text-sm">
                   <span className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full font-medium">
                     <BookOpen size={16} />
-                    {t.skillModal.learnedFrom} {selectedSkill.source[lang]}
+                    {t.skillModal.learnedFrom} {selectedSkill.source}
                   </span>
                   {selectedSkill.sourceUrl && (
                     <a 
                       href={selectedSkill.sourceUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium"
+                      className="text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium bg-slate-100 hover:bg-blue-50 px-3 py-1.5 rounded-full"
                     >
                       {t.skillModal.visitPlatform} <ExternalLink size={14} />
+                    </a>
+                  )}
+                  {selectedSkill.playlistUrl && (
+                    <a 
+                      href={selectedSkill.playlistUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-slate-500 hover:text-red-600 transition-colors flex items-center gap-1 font-medium bg-slate-100 hover:bg-red-50 px-3 py-1.5 rounded-full"
+                    >
+                      {lang === 'en' ? 'Watch Full Playlist' : lang === 'bn' ? 'সম্পূর্ণ প্লেলিস্ট দেখুন' : '观看完整播放列表'} <ExternalLink size={14} />
                     </a>
                   )}
                 </div>

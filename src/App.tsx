@@ -1561,6 +1561,60 @@ export default function App() {
   
   const [showProjectsPage, setShowProjectsPage] = useState(false);
   const [selectedProject, setSelectedProject] = useState<number>(1);
+
+  // Ref to hold scroll position
+  const scrollPositionRef = useRef<number>(0);
+
+  // Handle URL hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash === '#cv-page') {
+        setShowCVPage(true);
+        setShowProjectsPage(false);
+        setActiveSection('cv');
+        window.scrollTo(0, 0);
+      } else if (hash.startsWith('#project-')) {
+        const id = parseInt(hash.replace('#project-', ''));
+        setSelectedProject(id);
+        setShowProjectsPage(true);
+        setShowCVPage(false);
+        setActiveSection('research');
+        window.scrollTo(0, 0);
+      } else {
+        setShowCVPage(false);
+        setShowProjectsPage(false);
+        
+        // Wait for DOM to update, then scroll to section or restore
+        setTimeout(() => {
+          if (hash && hash !== '#') {
+            const element = document.querySelector(hash);
+            if (element) {
+              const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+              window.scrollTo({
+                top: elementPosition - 80, // Offset for navbar
+                behavior: 'smooth'
+              });
+              // Set active section based on hash
+              setActiveSection(hash.substring(1));
+            }
+          } else if (hash === '') {
+            // Revert to saved scroll position if available, else let browser handle it
+            if (scrollPositionRef.current > 0) {
+              window.scrollTo({ top: scrollPositionRef.current, behavior: 'auto' });
+              scrollPositionRef.current = 0; // Reset after using
+            } else if (window.scrollY === 0) {
+              setActiveSection('home');
+            }
+          }
+        }, 50);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // Run on mount
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
   
   // New state variables for Skills & Certificates section
   const [isSkillsExpanded, setIsSkillsExpanded] = useState(false);
@@ -1619,53 +1673,7 @@ export default function App() {
 
   const [activeSection, setActiveSection] = useState('home');
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash === '#cv-page') {
-        setShowCVPage(true);
-        setShowProjectsPage(false);
-        setActiveSection('cv');
-        window.scrollTo(0, 0);
-      } else if (hash.startsWith('#project-')) {
-        const id = parseInt(hash.replace('#project-', ''));
-        setSelectedProject(id);
-        setShowProjectsPage(true);
-        setShowCVPage(false);
-        setActiveSection('research');
-        window.scrollTo(0, 0);
-      } else {
-        setShowCVPage(false);
-        setShowProjectsPage(false);
-        
-        // Wait for DOM to update, then scroll to section (or top)
-        setTimeout(() => {
-          if (hash && hash !== '#') {
-            const element = document.querySelector(hash);
-            if (element) {
-              const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-              window.scrollTo({
-                top: elementPosition - 80, // Offset for navbar
-                behavior: 'smooth'
-              });
-              // Set active section based on hash
-              setActiveSection(hash.substring(1));
-            }
-          } else if (window.scrollY === 0 || hash === '') {
-            // Only force scroll to top if they explicitly went back to root
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setActiveSection('home');
-          }
-        }, 50);
-      }
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange(); // Run on mount
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
-  // Handle scroll effect for navbar and active section
+  // Handle scroll effect for navbar
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -1691,7 +1699,7 @@ export default function App() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    handleScroll(); // Check on mount/update
     return () => window.removeEventListener('scroll', handleScroll);
   }, [showCVPage, showProjectsPage]);
 
@@ -1736,16 +1744,18 @@ export default function App() {
     </a>
   );
 
+  const isNavDocked = scrolled || showCVPage || showProjectsPage;
+
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-blue-100 selection:text-blue-900">
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-5'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${isNavDocked ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-5'}`}>
         <div className="max-w-6xl mx-auto px-6 md:px-12 flex items-center justify-between relative min-h-[48px]">
           
           {/* Left side: Profile Photo & Name (Visible when scrolled) */}
           <button 
             onClick={() => setIsProfileModalOpen(true)}
-            className={`absolute left-6 md:left-12 flex flex-col items-center justify-center transition-all duration-500 ease-in-out hover:scale-105 ${scrolled ? 'opacity-100 translate-x-0 cursor-pointer' : 'opacity-0 -translate-x-10 pointer-events-none'}`}
+            className={`absolute left-6 md:left-12 flex flex-col items-center justify-center transition-all duration-500 ease-in-out hover:scale-105 ${isNavDocked ? 'opacity-100 translate-x-0 cursor-pointer' : 'opacity-0 -translate-x-10 pointer-events-none'}`}
             aria-label="View full profile and contact"
           >
             <img 
@@ -1758,25 +1768,12 @@ export default function App() {
           </button>
 
           {/* Center/Left: Logo */}
-          <div className={`absolute transition-all duration-500 ease-in-out ${scrolled ? 'left-1/2 -translate-x-1/2 lg:left-6 lg:translate-x-0' : 'left-6 md:left-12'}`}>
+          <div className={`absolute transition-all duration-500 ease-in-out ${isNavDocked ? 'left-1/2 -translate-x-1/2' : 'left-6 md:left-12'}`}>
             <NavbarLogo />
           </div>
 
           {/* Right side: Language Switcher & Hamburger Menu */}
           <div className="ml-auto flex items-center gap-2 md:gap-4 z-50 relative">
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-6 mr-4">
-              {navLinks.map((link) => (
-                <a 
-                  key={link.name} 
-                  href={link.href} 
-                  className={`text-sm font-serif font-medium transition-colors whitespace-nowrap hover:scale-105 transform duration-200 ${activeSection === link.href.substring(1) ? 'text-blue-600 font-bold' : 'text-slate-600 hover:text-blue-600'}`}
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-
             <div id="lang-switcher" className="relative hidden sm:block">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
@@ -1799,7 +1796,7 @@ export default function App() {
 
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-slate-600 hover:text-blue-600 transition-colors lg:hidden"
+              className="p-2 text-slate-600 hover:text-blue-600 transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -1809,7 +1806,7 @@ export default function App() {
 
         {/* Smooth Compact Dropdown Menu */}
         <div 
-          className={`lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-sm overflow-hidden transition-all duration-500 ease-in-out origin-top ${
+          className={`absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-sm overflow-hidden transition-all duration-500 ease-in-out origin-top ${
             isMenuOpen ? 'max-h-64 opacity-100 border-b border-slate-200 py-4' : 'max-h-0 opacity-0 py-0'
           }`}
         >
@@ -1840,6 +1837,14 @@ export default function App() {
           </div>
         </div>
       </nav>
+
+      {showCVPage && (
+        <CVPage onClose={() => window.history.back()} lang={lang} />
+      )}
+      
+      {showProjectsPage && (
+        <ProjectsPage onClose={() => window.history.back()} currentProjectId={selectedProject} setCurrentProjectId={setSelectedProject} lang={lang} />
+      )}
 
       <div className={showCVPage || showProjectsPage ? 'hidden' : 'block'}>
         <main>
@@ -2021,6 +2026,7 @@ export default function App() {
                           <div 
                             onClick={(e) => {
                               if ((e.target as HTMLElement).closest('a')) return;
+                              scrollPositionRef.current = window.scrollY;
                               window.location.hash = 'project-5';
                             }}
                             className="group cursor-pointer border border-slate-200 p-8 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col"
@@ -2059,6 +2065,7 @@ export default function App() {
                           <div 
                             onClick={(e) => {
                               if ((e.target as HTMLElement).closest('a')) return;
+                              scrollPositionRef.current = window.scrollY;
                               window.location.hash = 'project-6';
                             }}
                             className="group cursor-pointer border border-slate-200 p-8 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col"
@@ -2195,6 +2202,7 @@ export default function App() {
                           {/* Project 1 */}
                           <div 
                             onClick={() => {
+                              scrollPositionRef.current = window.scrollY;
                               window.location.hash = 'project-1';
                             }}
                             className="group cursor-pointer border border-slate-200 p-6 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col h-full"
@@ -2219,6 +2227,7 @@ export default function App() {
                           {/* Project 2 */}
                           <div 
                             onClick={() => {
+                              scrollPositionRef.current = window.scrollY;
                               window.location.hash = 'project-2';
                             }}
                             className="group cursor-pointer border border-slate-200 p-6 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col h-full"
@@ -2243,6 +2252,7 @@ export default function App() {
                           {/* Project 3 */}
                           <div 
                             onClick={() => {
+                              scrollPositionRef.current = window.scrollY;
                               window.location.hash = 'project-3';
                             }}
                             className="group cursor-pointer border border-slate-200 p-6 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col h-full"
@@ -2269,6 +2279,7 @@ export default function App() {
                             onClick={(e) => {
                               // If user clicks the GitHub link directly on the card, don't open project page
                               if ((e.target as HTMLElement).closest('a')) return;
+                              scrollPositionRef.current = window.scrollY;
                               window.location.hash = 'project-4';
                             }}
                             className="group cursor-pointer border border-slate-200 p-6 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col h-full"
@@ -2451,6 +2462,7 @@ export default function App() {
             </div>
             <div 
               onClick={() => {
+                scrollPositionRef.current = window.scrollY;
                 window.location.hash = 'cv-page';
               }}
               className="group cursor-pointer bg-slate-50 border border-slate-200 rounded-xl p-8 md:p-12 flex flex-col items-center justify-center text-center hover:border-blue-400 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
@@ -2486,14 +2498,6 @@ export default function App() {
         </section>
       </main>
       </div>
-
-      {showCVPage && (
-        <CVPage onClose={() => { window.location.hash = 'cv'; }} lang={lang} />
-      )}
-
-      {showProjectsPage && (
-        <ProjectsPage onClose={() => { window.location.hash = 'research'; }} currentProjectId={selectedProject} setCurrentProjectId={setSelectedProject} lang={lang} />
-      )}
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-12 px-6 md:px-12 text-center">

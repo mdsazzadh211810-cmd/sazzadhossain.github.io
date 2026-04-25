@@ -1813,36 +1813,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* CV Section */}
-        <section id="cv" className="py-20 bg-white px-6 md:px-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-10">
-              <h2 className="text-3xl font-serif font-bold text-slate-900">{t.nav.cv}</h2>
-              <div className="h-px bg-slate-300 flex-1"></div>
-            </div>
-            <div 
-              onClick={() => {
-                setShowCVPage(true);
-                window.scrollTo(0, 0);
-              }}
-              className="group cursor-pointer bg-slate-50 border border-slate-200 rounded-xl p-8 md:p-12 flex flex-col items-center justify-center text-center hover:border-blue-400 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1 bg-blue-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              <div className="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <BookOpen size={40} strokeWidth={1.5} />
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4">View My Full CV</h3>
-              <p className="text-slate-600 max-w-lg mb-8">
-                Click here to open my detailed Curriculum Vitae in a new page, where you can read about my academic background, research experience, and download a copy for your records.
-              </p>
-              <button className="px-8 py-3 bg-blue-600 text-white rounded-sm font-medium tracking-wide group-hover:bg-blue-700 transition-colors flex items-center gap-2">
-                <span>Open CV Page</span>
-                <ExternalLink size={18} />
-              </button>
-            </div>
-          </div>
-        </section>
-
         {/* Research Section */}
         <section id="research" className="pt-20 pb-10 bg-slate-50 px-6 md:px-12">
           <div className="max-w-6xl mx-auto">
@@ -1969,97 +1939,6 @@ export default function App() {
                     <div className={`grid transition-all duration-500 ease-in-out ${activeResearchTab === 'projects' ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                       <div className="overflow-hidden">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-2">
-                          {/* Project 1: Amylase Kinetics (Unpublished) */}
-                          <div className="group border border-slate-200 p-8 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col">
-                            <div className="absolute top-0 left-0 w-1 h-0 bg-blue-600 transition-all duration-300 group-hover:h-full"></div>
-                            <div className="flex justify-between items-start mb-4">
-                              <div className="text-blue-600 flex items-center gap-3">
-                                <Microscope size={32} strokeWidth={1.5} />
-                                <a href="https://docs.google.com/document/d/1XbPj-EBaDAbTlKMUNInHogxc9WTyhSFB/edit?usp=drive_web&ouid=114814120597712128910&rtpof=true" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors z-10" title="View Manuscript PDF">
-                                  <ExternalLink size={20} />
-                                </a>
-                              </div>
-                              <span className="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full border border-amber-200 shadow-sm">
-                                {t.currentProjects.p1.badge}
-                              </span>
-                            </div>
-                            <h3 className="text-xl font-serif font-bold text-slate-900 mb-3">
-                              {t.currentProjects.p1.title}
-                            </h3>
-                            <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
-                              <strong className="text-slate-800 font-medium">{t.currentProjects.p1.focusLabel}</strong> {t.currentProjects.p1.focusText}<br/><br/>
-                              {t.currentProjects.p1.desc}
-                            </p>
-                            <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-100">
-                              {t.currentProjects.p1.tags.map((tag, i) => (
-                                <span key={i} className={`px-2 py-1 text-xs font-medium rounded ${i === 0 ? 'bg-blue-50 text-blue-700' : i === 1 ? 'bg-emerald-50 text-emerald-700' : i === 2 ? 'bg-purple-50 text-purple-700' : 'bg-slate-100 text-slate-700'}`}>
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                            <a href="https://docs.google.com/document/d/1XbPj-EBaDAbTlKMUNInHogxc9WTyhSFB/edit?usp=drive_web&ouid=114814120597712128910&rtpof=true" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-0">
-                              <span className="sr-only">{t.currentProjects.p1.linkText || 'View'}</span>
-                            </a>
-                          </div>
-
-                          {/* Project 2: dsRNA Predictor */}
-                          <div className="group border border-slate-200 p-8 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col">
-                            <div className="absolute top-0 left-0 w-1 h-0 bg-blue-600 transition-all duration-300 group-hover:h-full"></div>
-                            <div className="flex justify-between items-start mb-4">
-                              <div className="text-blue-600"><Cpu size={32} strokeWidth={1.5} /></div>
-                              <a href="https://github.com/mdsazzadh211810-cmd/dsrna-predictor" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors z-10" title="View Source on GitHub">
-                                <Github size={24} />
-                              </a>
-                            </div>
-                            <h3 className="text-xl font-serif font-bold text-slate-900 mb-3">
-                              {t.currentProjects.p2.title}
-                            </h3>
-                            <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
-                              <strong className="text-slate-800 font-medium">{t.currentProjects.p2.focusLabel}</strong> {t.currentProjects.p2.focusText}<br/><br/>
-                              {t.currentProjects.p2.desc}
-                            </p>
-                            <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-100">
-                              {t.currentProjects.p2.tags.map((tag, i) => (
-                                <span key={i} className={`px-2 py-1 text-xs font-medium rounded ${i === 0 ? 'bg-blue-50 text-blue-700' : i === 1 ? 'bg-emerald-50 text-emerald-700' : i === 2 ? 'bg-purple-50 text-purple-700' : 'bg-slate-100 text-slate-700'}`}>
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                            <a href="https://github.com/mdsazzadh211810-cmd/dsrna-predictor" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-0">
-                              <span className="sr-only">View Project</span>
-                            </a>
-                          </div>
-
-                          {/* Project 3: GNN Molecular Property Prediction */}
-                          <div className="group border border-slate-200 p-8 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col">
-                            <div className="absolute top-0 left-0 w-1 h-0 bg-blue-600 transition-all duration-300 group-hover:h-full"></div>
-                            <div className="flex justify-between items-start mb-4">
-                              <div className="text-blue-600"><Network size={32} strokeWidth={1.5} /></div>
-                              <div className="flex flex-col items-end gap-2">
-                                <a href="https://github.com/mdsazzadh211810-cmd/Part1_GNN_Molecular_Prediction" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors z-10" title="View Source on GitHub">
-                                  <Github size={24} />
-                                </a>
-                              </div>
-                            </div>
-                            <h3 className="text-xl font-serif font-bold text-slate-900 mb-3">
-                              {t.currentProjects.p3.title}
-                            </h3>
-                            <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
-                              <strong className="text-slate-800 font-medium">{t.currentProjects.p3.focusLabel}</strong> {t.currentProjects.p3.focusText}<br/><br/>
-                              {t.currentProjects.p3.desc}
-                            </p>
-                            <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-100">
-                              {t.currentProjects.p3.tags.map((tag, i) => (
-                                <span key={i} className={`px-2 py-1 text-xs font-medium rounded ${i === 0 ? 'bg-blue-50 text-blue-700' : i === 1 ? 'bg-emerald-50 text-emerald-700' : i === 2 ? 'bg-purple-50 text-purple-700' : 'bg-slate-100 text-slate-700'}`}>
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                            <a href="https://github.com/mdsazzadh211810-cmd/Part1_GNN_Molecular_Prediction" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-0">
-                              <span className="sr-only">View Project</span>
-                            </a>
-                          </div>
-
                           {/* Project 4: Genetic Engineering Lab 1 */}
                           <div 
                             onClick={(e) => {
@@ -2138,6 +2017,97 @@ export default function App() {
                                 <FileText size={16} /> {t.currentProjects.p5.linkText}
                               </a>
                             </div>
+                          </div>
+
+                          {/* Project 3: GNN Molecular Property Prediction */}
+                          <div className="group border border-slate-200 p-8 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col">
+                            <div className="absolute top-0 left-0 w-1 h-0 bg-blue-600 transition-all duration-300 group-hover:h-full"></div>
+                            <div className="flex justify-between items-start mb-4">
+                              <div className="text-blue-600"><Network size={32} strokeWidth={1.5} /></div>
+                              <div className="flex flex-col items-end gap-2">
+                                <a href="https://github.com/mdsazzadh211810-cmd/Part1_GNN_Molecular_Prediction" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors z-10" title="View Source on GitHub">
+                                  <Github size={24} />
+                                </a>
+                              </div>
+                            </div>
+                            <h3 className="text-xl font-serif font-bold text-slate-900 mb-3">
+                              {t.currentProjects.p3.title}
+                            </h3>
+                            <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                              <strong className="text-slate-800 font-medium">{t.currentProjects.p3.focusLabel}</strong> {t.currentProjects.p3.focusText}<br/><br/>
+                              {t.currentProjects.p3.desc}
+                            </p>
+                            <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-100">
+                              {t.currentProjects.p3.tags.map((tag, i) => (
+                                <span key={i} className={`px-2 py-1 text-xs font-medium rounded ${i === 0 ? 'bg-blue-50 text-blue-700' : i === 1 ? 'bg-emerald-50 text-emerald-700' : i === 2 ? 'bg-purple-50 text-purple-700' : 'bg-slate-100 text-slate-700'}`}>
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                            <a href="https://github.com/mdsazzadh211810-cmd/Part1_GNN_Molecular_Prediction" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-0">
+                              <span className="sr-only">View Project</span>
+                            </a>
+                          </div>
+
+                          {/* Project 2: dsRNA Predictor */}
+                          <div className="group border border-slate-200 p-8 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col">
+                            <div className="absolute top-0 left-0 w-1 h-0 bg-blue-600 transition-all duration-300 group-hover:h-full"></div>
+                            <div className="flex justify-between items-start mb-4">
+                              <div className="text-blue-600"><Cpu size={32} strokeWidth={1.5} /></div>
+                              <a href="https://github.com/mdsazzadh211810-cmd/dsrna-predictor" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors z-10" title="View Source on GitHub">
+                                <Github size={24} />
+                              </a>
+                            </div>
+                            <h3 className="text-xl font-serif font-bold text-slate-900 mb-3">
+                              {t.currentProjects.p2.title}
+                            </h3>
+                            <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                              <strong className="text-slate-800 font-medium">{t.currentProjects.p2.focusLabel}</strong> {t.currentProjects.p2.focusText}<br/><br/>
+                              {t.currentProjects.p2.desc}
+                            </p>
+                            <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-100">
+                              {t.currentProjects.p2.tags.map((tag, i) => (
+                                <span key={i} className={`px-2 py-1 text-xs font-medium rounded ${i === 0 ? 'bg-blue-50 text-blue-700' : i === 1 ? 'bg-emerald-50 text-emerald-700' : i === 2 ? 'bg-purple-50 text-purple-700' : 'bg-slate-100 text-slate-700'}`}>
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                            <a href="https://github.com/mdsazzadh211810-cmd/dsrna-predictor" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-0">
+                              <span className="sr-only">View Project</span>
+                            </a>
+                          </div>
+
+                          {/* Project 1: Amylase Kinetics (Unpublished) */}
+                          <div className="group border border-slate-200 p-8 hover:border-blue-600 hover:shadow-lg transition-all duration-300 bg-white relative overflow-hidden flex flex-col">
+                            <div className="absolute top-0 left-0 w-1 h-0 bg-blue-600 transition-all duration-300 group-hover:h-full"></div>
+                            <div className="flex justify-between items-start mb-4">
+                              <div className="text-blue-600 flex items-center gap-3">
+                                <Microscope size={32} strokeWidth={1.5} />
+                                <a href="https://docs.google.com/document/d/1XbPj-EBaDAbTlKMUNInHogxc9WTyhSFB/edit?usp=drive_web&ouid=114814120597712128910&rtpof=true" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors z-10" title="View Manuscript PDF">
+                                  <ExternalLink size={20} />
+                                </a>
+                              </div>
+                              <span className="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full border border-amber-200 shadow-sm">
+                                {t.currentProjects.p1.badge}
+                              </span>
+                            </div>
+                            <h3 className="text-xl font-serif font-bold text-slate-900 mb-3">
+                              {t.currentProjects.p1.title}
+                            </h3>
+                            <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                              <strong className="text-slate-800 font-medium">{t.currentProjects.p1.focusLabel}</strong> {t.currentProjects.p1.focusText}<br/><br/>
+                              {t.currentProjects.p1.desc}
+                            </p>
+                            <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-100">
+                              {t.currentProjects.p1.tags.map((tag, i) => (
+                                <span key={i} className={`px-2 py-1 text-xs font-medium rounded ${i === 0 ? 'bg-blue-50 text-blue-700' : i === 1 ? 'bg-emerald-50 text-emerald-700' : i === 2 ? 'bg-purple-50 text-purple-700' : 'bg-slate-100 text-slate-700'}`}>
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                            <a href="https://docs.google.com/document/d/1XbPj-EBaDAbTlKMUNInHogxc9WTyhSFB/edit?usp=drive_web&ouid=114814120597712128910&rtpof=true" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-0">
+                              <span className="sr-only">{t.currentProjects.p1.linkText || 'View'}</span>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -2402,6 +2372,36 @@ export default function App() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CV Section */}
+        <section id="cv" className="py-20 bg-white px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-4 mb-10">
+              <h2 className="text-3xl font-serif font-bold text-slate-900">{t.nav.cv}</h2>
+              <div className="h-px bg-slate-300 flex-1"></div>
+            </div>
+            <div 
+              onClick={() => {
+                setShowCVPage(true);
+                window.scrollTo(0, 0);
+              }}
+              className="group cursor-pointer bg-slate-50 border border-slate-200 rounded-xl p-8 md:p-12 flex flex-col items-center justify-center text-center hover:border-blue-400 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 w-full h-1 bg-blue-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <BookOpen size={40} strokeWidth={1.5} />
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4">View My Full CV</h3>
+              <p className="text-slate-600 max-w-lg mb-8">
+                Click here to open my detailed Curriculum Vitae in a new page, where you can read about my academic background, research experience, and download a copy for your records.
+              </p>
+              <button className="px-8 py-3 bg-blue-600 text-white rounded-sm font-medium tracking-wide group-hover:bg-blue-700 transition-colors flex items-center gap-2">
+                <span>Open CV Page</span>
+                <ExternalLink size={18} />
+              </button>
             </div>
           </div>
         </section>

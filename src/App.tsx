@@ -1403,7 +1403,7 @@ const ProjectsPage = ({ onClose, currentProjectId, setCurrentProjectId, lang }: 
           <div>
             <p className="mb-4 text-slate-700 leading-relaxed">I have successfully authored a detailed laboratory report that documents the methodologies, results, and critical discussions of this experiment. You can view the original PDF report below:</p>
             <div className="flex mt-4 relative z-10">
-              <a href="https://docs.google.com/document/d/1mi0KpQFsa7ON0MUZHviu-2oVNboSuAodT6EWpbowMNU/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
+              <a href={`${import.meta.env.BASE_URL}assets/Lab_1_Report.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
                 <FileText size={18} /> View Lab 1 Report
               </a>
             </div>
@@ -1413,7 +1413,7 @@ const ProjectsPage = ({ onClose, currentProjectId, setCurrentProjectId, lang }: 
           <div>
             <p className="mb-4 text-slate-700 leading-relaxed">আমি এই পরীক্ষার কার্যপ্রণালী, ফলাফল এবং প্রাসঙ্গিক মূল্যায়ন বিস্তারিতভাবে নথিবদ্ধ করে একটি পূর্ণাঙ্গ ল্যাবরেটরি বৈজ্ঞানিক প্রতিবেদন লিখেছি যা সফলভাবে মূল্যায়িত হয়েছে। আপনি নিচের লিঙ্ক থেকে মূল পিডিএফ রিপোর্টটি দেখতে পারেন:</p>
             <div className="flex mt-4 relative z-10">
-              <a href="https://docs.google.com/document/d/1mi0KpQFsa7ON0MUZHviu-2oVNboSuAodT6EWpbowMNU/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
+              <a href={`${import.meta.env.BASE_URL}assets/Lab_1_Report.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
                 <FileText size={18} /> রিপোর্ট ১ (ল্যাব ১) দেখুন
               </a>
             </div>
@@ -1423,7 +1423,7 @@ const ProjectsPage = ({ onClose, currentProjectId, setCurrentProjectId, lang }: 
           <div>
             <p className="mb-4 text-slate-700 leading-relaxed">我已经成功撰写了一份详细的实验室报告，记录了该实验的方法、结果和批判性讨论点。您可以在下面查看原始的 PDF 报告：</p>
             <div className="flex mt-4 relative z-10">
-              <a href="https://docs.google.com/document/d/1mi0KpQFsa7ON0MUZHviu-2oVNboSuAodT6EWpbowMNU/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
+              <a href={`${import.meta.env.BASE_URL}assets/Lab_1_Report.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
                 <FileText size={18} /> 查看实验 1 报告
               </a>
             </div>
@@ -1464,7 +1464,7 @@ const ProjectsPage = ({ onClose, currentProjectId, setCurrentProjectId, lang }: 
           <div>
             <p className="mb-4 text-slate-700 leading-relaxed">I have successfully authored a detailed laboratory report that documents the methodologies, PCR programs, and critical discussions of this process. You can view the original PDF report below:</p>
             <div className="flex mt-4 relative z-10">
-              <a href="https://docs.google.com/document/d/1f92Ib9VO8_sp7PbADcGC_qVHL_v0kAigIqiDRtCfNU4/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
+              <a href={`${import.meta.env.BASE_URL}assets/Lab_2_Report.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
                 <FileText size={18} /> View Lab 2 Report
               </a>
             </div>
@@ -1474,7 +1474,7 @@ const ProjectsPage = ({ onClose, currentProjectId, setCurrentProjectId, lang }: 
           <div>
             <p className="mb-4 text-slate-700 leading-relaxed">আমি এই প্রক্রিয়ায় পিসিআর প্রোগ্রাম এবং প্রাসঙ্গিক আলোচনা বিস্তারিতভাবে নথিবদ্ধ করে একটি পূর্ণাঙ্গ ল্যাবরেটরি বৈজ্ঞানিক প্রতিবেদন লিখেছি যা পরবর্তীতে সফলভাবে মূল্যায়িত হয়েছে। মূল পিডিএফ রিপোর্টটি নিচে দেওয়া হলো:</p>
             <div className="flex mt-4 relative z-10">
-              <a href="https://docs.google.com/document/d/1f92Ib9VO8_sp7PbADcGC_qVHL_v0kAigIqiDRtCfNU4/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
+              <a href={`${import.meta.env.BASE_URL}assets/Lab_2_Report.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
                 <FileText size={18} /> রিপোর্ট ২ (ল্যাব ২) দেখুন
               </a>
             </div>
@@ -1484,7 +1484,7 @@ const ProjectsPage = ({ onClose, currentProjectId, setCurrentProjectId, lang }: 
           <div>
             <p className="mb-4 text-slate-700 leading-relaxed">我已经成功撰写了一份详细的实验室报告，记录了该过程的方法、PCR 程序和批判性讨论点。您可以在下面查看原始的 PDF 报告：</p>
             <div className="flex mt-4 relative z-10">
-              <a href="https://docs.google.com/document/d/1f92Ib9VO8_sp7PbADcGC_qVHL_v0kAigIqiDRtCfNU4/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
+              <a href={`${import.meta.env.BASE_URL}assets/Lab_2_Report.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm hover:shadow" onClick={(e) => e.stopPropagation()}>
                 <FileText size={18} /> 查看实验 2 报告
               </a>
             </div>
@@ -2121,7 +2121,7 @@ export default function App() {
                               ))}
                             </div>
                             <div className="flex gap-3 relative z-10 mt-auto">
-                              <a href="https://docs.google.com/document/d/1mi0KpQFsa7ON0MUZHviu-2oVNboSuAodT6EWpbowMNU/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
+                              <a href={`${import.meta.env.BASE_URL}assets/Lab_1_Report.pdf`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
                                 <FileText size={16} /> {t.currentProjects.p4.linkText}
                               </a>
                             </div>
@@ -2160,7 +2160,7 @@ export default function App() {
                               ))}
                             </div>
                             <div className="flex gap-3 relative z-10 mt-auto">
-                              <a href="https://docs.google.com/document/d/1f92Ib9VO8_sp7PbADcGC_qVHL_v0kAigIqiDRtCfNU4/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
+                              <a href={`${import.meta.env.BASE_URL}assets/Lab_2_Report.pdf`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
                                 <FileText size={16} /> {t.currentProjects.p5.linkText}
                               </a>
                             </div>
@@ -2230,7 +2230,7 @@ export default function App() {
                             <div className="flex justify-between items-start mb-4">
                               <div className="text-blue-600 flex items-center gap-3">
                                 <Microscope size={32} strokeWidth={1.5} />
-                                <a href="https://docs.google.com/document/d/1XbPj-EBaDAbTlKMUNInHogxc9WTyhSFB/edit?usp=drive_web&ouid=114814120597712128910&rtpof=true" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors z-10" title="View Manuscript PDF">
+                                <a href={`${import.meta.env.BASE_URL}assets/Manuscript.pdf`} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors z-10" title="View Manuscript PDF">
                                   <ExternalLink size={20} />
                                 </a>
                               </div>
@@ -2252,7 +2252,7 @@ export default function App() {
                                 </span>
                               ))}
                             </div>
-                            <a href="https://docs.google.com/document/d/1XbPj-EBaDAbTlKMUNInHogxc9WTyhSFB/edit?usp=drive_web&ouid=114814120597712128910&rtpof=true" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-0">
+                            <a href={`${import.meta.env.BASE_URL}assets/Manuscript.pdf`} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-0">
                               <span className="sr-only">{t.currentProjects.p1.linkText || 'View'}</span>
                             </a>
                           </div>

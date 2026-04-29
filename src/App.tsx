@@ -1,3 +1,4 @@
+const getProxyUrl = (url: string) => '/api/proxy?url=' + encodeURIComponent(url);
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Award, BookOpen, Twitter, Facebook, MessageCircle, GraduationCap, Phone, Microscope, Leaf, Cpu, ChevronDown, Download, ArrowLeft, ArrowRight, Network, Beaker, FileText, Languages } from 'lucide-react';
@@ -343,7 +344,7 @@ const CERTIFICATES = [
       bn: "উইলি রিসার্চার একাডেমি",
       zh: "Wiley 研究员学院"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=19xu0HNCLkmptSeMGut8rz9yyBWJT5JZZ&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=19xu0HNCLkmptSeMGut8rz9yyBWJT5JZZ&sz=w1000"),
     link: "https://researcheracademy.wiley.com/"
   },
   {
@@ -368,7 +369,7 @@ const CERTIFICATES = [
       bn: "স্টিফেন পি. মেফিল্ড, পিএইচডি",
       zh: "Stephen P. Mayfield 博士"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1lOgxi77-JFTt0gfmegpeePcRX0JtYWBJ&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1lOgxi77-JFTt0gfmegpeePcRX0JtYWBJ&sz=w1000"),
     link: "https://www.coursera.org/learn/algae"
   },
   {
@@ -393,7 +394,7 @@ const CERTIFICATES = [
       bn: "স্টেফান উইসব্যাওয়ার, প্যাসকাল বেন্ডিয়েন",
       zh: "Stefan Wisbauer, Pascal Bendien"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=11lTsOqz2GuRyPZYf77EOrDhhs9s7ShY2&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=11lTsOqz2GuRyPZYf77EOrDhhs9s7ShY2&sz=w1000"),
     link: "https://www.coursera.org/learn/microbiology-foundations"
   },
   {
@@ -418,7 +419,7 @@ const CERTIFICATES = [
       bn: "চার্লস সেভেরেন্স",
       zh: "Charles Severance"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1NFaJNZyU5Hx0-T91aHKcsNg2PysI17Px&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1NFaJNZyU5Hx0-T91aHKcsNg2PysI17Px&sz=w1000"),
     link: "https://www.coursera.org/learn/python-network-data"
   },
   {
@@ -443,7 +444,7 @@ const CERTIFICATES = [
       bn: "চার্লস সেভেরেন্স",
       zh: "Charles Severance"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1bDbcjC5SRk4MisRtAQWvFloAEO7b7Wjk&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1bDbcjC5SRk4MisRtAQWvFloAEO7b7Wjk&sz=w1000"),
     link: "https://www.coursera.org/learn/python"
   },
   {
@@ -468,7 +469,7 @@ const CERTIFICATES = [
       bn: "চার্লস সেভেরেন্স",
       zh: "Charles Severance"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=18OEtYbvQatQzH-dw0X65h2nvXh1tiuiY&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=18OEtYbvQatQzH-dw0X65h2nvXh1tiuiY&sz=w1000"),
     link: "https://www.coursera.org/learn/python-data"
   },
   {
@@ -493,7 +494,7 @@ const CERTIFICATES = [
       bn: "ডঃ রবার্ট কোসারা",
       zh: "Robert Kosara 博士"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1qAiHHjgIZ0WmEKut9IUcgzuzhy75Uwya&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1qAiHHjgIZ0WmEKut9IUcgzuzhy75Uwya&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -518,7 +519,7 @@ const CERTIFICATES = [
       bn: "ডঃ রবার্ট কোসারা",
       zh: "Robert Kosara 博士"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1mc1BVVRUhNoNeN5yQE2IKSW980eALXr4&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1mc1BVVRUhNoNeN5yQE2IKSW980eALXr4&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -543,7 +544,7 @@ const CERTIFICATES = [
       bn: "টম ডার্চ, ম্যাট পাভলোভিচ, স্টেসি চিন",
       zh: "Tom Dursch, Matt Pavlovich, Stacey Chin"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1UPCNG-cIh2TIQD5HIpuztw4AE2Ab1uWu&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1UPCNG-cIh2TIQD5HIpuztw4AE2Ab1uWu&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -568,7 +569,7 @@ const CERTIFICATES = [
       bn: "র‍্যাচেল হার্বার্ট",
       zh: "Rachel Herbert"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1PNLCeZoCrFHtXVdkFA3aT1xIAxptZsuu&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1PNLCeZoCrFHtXVdkFA3aT1xIAxptZsuu&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -593,7 +594,7 @@ const CERTIFICATES = [
       bn: "এলিসেন্ডা অ্যাগুইলেরা-কোরা, ডগ ফেল্ডনার",
       zh: "Elisenda Aguilera-Cora, Doug Feldner"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1lfxKdXQeqQf_7xWX8V9arczu8x2-OcGe&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1lfxKdXQeqQf_7xWX8V9arczu8x2-OcGe&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -618,7 +619,7 @@ const CERTIFICATES = [
       bn: "জর্জ সিনভাল, ড্যানিয়েল ক্রিস্টে",
       zh: "Jorge Sinval, Daniel Christe"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=15a_m0_vjsBRgLJ6_vpknWZKwazeZrGeG&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=15a_m0_vjsBRgLJ6_vpknWZKwazeZrGeG&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -643,7 +644,7 @@ const CERTIFICATES = [
       bn: "লন্ডা শিয়েবিঙ্গার, কারা ট্যানেনবাউম, হলি ফক ক্রজেসিনস্কি, জেসিকা মাইলস",
       zh: "Londa Schiebinger, Cara Tannenbaum, Holly Falk Krzesinski, Jessica Miles"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1rnSRf5DCXBpvn2BJd-y_KPWwmtGGenQr&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1rnSRf5DCXBpvn2BJd-y_KPWwmtGGenQr&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -668,7 +669,7 @@ const CERTIFICATES = [
       bn: "অ্যান্থনি নিউম্যান",
       zh: "Anthony Newman"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1cl0iHsuE08VCh6XR6q-KKVk9gCrQjY2T&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1cl0iHsuE08VCh6XR6q-KKVk9gCrQjY2T&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -693,7 +694,7 @@ const CERTIFICATES = [
       bn: "এলসেভিয়ার রিসার্চার একাডেমি",
       zh: "爱思唯尔研究员学院"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1J8Ul017mS9_Ukh9_CcXCDcuoVV7vcOrM&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1J8Ul017mS9_Ukh9_CcXCDcuoVV7vcOrM&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -718,7 +719,7 @@ const CERTIFICATES = [
       bn: "অ্যান্থনি নিউম্যান",
       zh: "Anthony Newman"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=12vXJICAo2YOxr9iIb_4pf4tKRgtIDlb0&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=12vXJICAo2YOxr9iIb_4pf4tKRgtIDlb0&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -743,7 +744,7 @@ const CERTIFICATES = [
       bn: "হ্যানা ফোরম্যান",
       zh: "Hannah Foreman"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=15chYKCCxxCDnBqDI0mZ78vfoDhZivloy&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=15chYKCCxxCDnBqDI0mZ78vfoDhZivloy&sz=w1000"),
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -768,7 +769,7 @@ const CERTIFICATES = [
       bn: "তরুণ খান্না, করিম লাখানি",
       zh: "Tarun Khanna, Karim Lakhani"
     },
-    imageUrl: "https://drive.google.com/thumbnail?id=1NfioKCyxaOsy9gF7HkXUQ97YtZv6aRPQ&sz=w1000",
+    imageUrl: getProxyUrl("https://drive.google.com/thumbnail?id=1NfioKCyxaOsy9gF7HkXUQ97YtZv6aRPQ&sz=w1000"),
     link: "https://www.aspireleaders.org/"
   }
 ];
@@ -1155,7 +1156,7 @@ const CVPage = ({ onClose, lang }: { onClose: () => void, lang: Language }) => {
     files.forEach((file, index) => {
       setTimeout(() => {
         const link = document.createElement('a');
-        link.href = `https://drive.google.com/uc?export=download&id=${file.id}`;
+        link.href = getProxyUrl(`https://drive.google.com/uc?export=download&id=${file.id}`);
         link.setAttribute('download', file.name);
         link.target = '_blank';
         document.body.appendChild(link);
@@ -1190,17 +1191,17 @@ const CVPage = ({ onClose, lang }: { onClose: () => void, lang: Language }) => {
         
         <div className="bg-white shadow-2xl border border-slate-200 flex flex-col mx-auto">
           <img 
-            src="https://drive.google.com/thumbnail?id=1OuTkymO7pKZadDjUkeXDyFlTtgpOwMLb&sz=w2000" 
+            src={getProxyUrl("https://drive.google.com/thumbnail?id=1OuTkymO7pKZadDjUkeXDyFlTtgpOwMLb&sz=w2000")} 
             alt="CV Page 1" 
             className="w-full h-auto block"
-            onError={(e) => { e.currentTarget.src = "https://drive.google.com/uc?export=view&id=1OuTkymO7pKZadDjUkeXDyFlTtgpOwMLb"; }}
+            onError={(e) => { e.currentTarget.src = getProxyUrl("https://drive.google.com/uc?export=view&id=1OuTkymO7pKZadDjUkeXDyFlTtgpOwMLb"); }}
           />
           <div className="w-full h-px bg-slate-200"></div>
           <img 
-            src="https://drive.google.com/thumbnail?id=1OS-DNjv1NI35xs-bUePXhk8LSuAb_Mhk&sz=w2000" 
+            src={getProxyUrl("https://drive.google.com/thumbnail?id=1OS-DNjv1NI35xs-bUePXhk8LSuAb_Mhk&sz=w2000")} 
             alt="CV Page 2" 
             className="w-full h-auto block"
-            onError={(e) => { e.currentTarget.src = "https://drive.google.com/uc?export=view&id=1OS-DNjv1NI35xs-bUePXhk8LSuAb_Mhk"; }}
+            onError={(e) => { e.currentTarget.src = getProxyUrl("https://drive.google.com/uc?export=view&id=1OS-DNjv1NI35xs-bUePXhk8LSuAb_Mhk"); }}
           />
         </div>
       </div>
@@ -1816,15 +1817,15 @@ export default function App() {
           </div>
 
           {/* Right side: Language Switcher & Hamburger Menu */}
-          <div className="ml-auto flex items-center gap-2 md:gap-4 z-50 relative">
-            <div id="lang-switcher" className="relative hidden sm:block">
+          <div className="ml-auto flex items-center gap-1.5 sm:gap-2 md:gap-4 z-50 relative">
+            <div id="lang-switcher" className="relative">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="flex items-center gap-1.5 p-2 text-slate-600 hover:text-blue-600 transition-colors bg-white/50 backdrop-blur-sm rounded-md border border-slate-200"
+                className="flex items-center gap-1 sm:gap-1.5 p-1.5 sm:p-2 text-slate-600 hover:text-blue-600 transition-colors bg-white/50 backdrop-blur-sm rounded-md border border-slate-200"
                 aria-label="Change language"
               >
-                <Languages size={20} />
-                <span className="text-sm font-medium uppercase">{lang}</span>
+                <Languages size={18} className="sm:w-5 sm:h-5" />
+                <span className="text-xs sm:text-sm font-medium uppercase">{lang}</span>
                 <ChevronDown size={14} className={`transition-transform duration-200 ${isLangMenuOpen ? 'rotate-180' : ''}`} />
               </button>
               

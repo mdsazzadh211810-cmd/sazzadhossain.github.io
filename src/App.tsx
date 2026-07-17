@@ -343,7 +343,7 @@ const CERTIFICATES = [
       bn: "উইলি রিসার্চার একাডেমি",
       zh: "Wiley 研究员学院"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=19xu0HNCLkmptSeMGut8rz9yyBWJT5JZZ",
+    imageUrl: "https://drive.google.com/thumbnail?id=19xu0HNCLkmptSeMGut8rz9yyBWJT5JZZ&sz=w1000",
     link: "https://researcheracademy.wiley.com/"
   },
   {
@@ -368,7 +368,7 @@ const CERTIFICATES = [
       bn: "স্টিফেন পি. মেফিল্ড, পিএইচডি",
       zh: "Stephen P. Mayfield 博士"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1lOgxi77-JFTt0gfmegpeePcRX0JtYWBJ",
+    imageUrl: "https://drive.google.com/thumbnail?id=1lOgxi77-JFTt0gfmegpeePcRX0JtYWBJ&sz=w1000",
     link: "https://www.coursera.org/learn/algae"
   },
   {
@@ -393,7 +393,7 @@ const CERTIFICATES = [
       bn: "স্টেফান উইসব্যাওয়ার, প্যাসকাল বেন্ডিয়েন",
       zh: "Stefan Wisbauer, Pascal Bendien"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=11lTsOqz2GuRyPZYf77EOrDhhs9s7ShY2",
+    imageUrl: "https://drive.google.com/thumbnail?id=11lTsOqz2GuRyPZYf77EOrDhhs9s7ShY2&sz=w1000",
     link: "https://www.coursera.org/learn/microbiology-foundations"
   },
   {
@@ -418,7 +418,7 @@ const CERTIFICATES = [
       bn: "চার্লস সেভেরেন্স",
       zh: "Charles Severance"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1NFaJNZyU5Hx0-T91aHKcsNg2PysI17Px",
+    imageUrl: "https://drive.google.com/thumbnail?id=1NFaJNZyU5Hx0-T91aHKcsNg2PysI17Px&sz=w1000",
     link: "https://www.coursera.org/learn/python-network-data"
   },
   {
@@ -443,7 +443,7 @@ const CERTIFICATES = [
       bn: "চার্লস সেভেরেন্স",
       zh: "Charles Severance"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1bDbcjC5SRk4MisRtAQWvFloAEO7b7Wjk",
+    imageUrl: "https://drive.google.com/thumbnail?id=1bDbcjC5SRk4MisRtAQWvFloAEO7b7Wjk&sz=w1000",
     link: "https://www.coursera.org/learn/python"
   },
   {
@@ -468,7 +468,7 @@ const CERTIFICATES = [
       bn: "চার্লস সেভেরেন্স",
       zh: "Charles Severance"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=18OEtYbvQatQzH-dw0X65h2nvXh1tiuiY",
+    imageUrl: "https://drive.google.com/thumbnail?id=18OEtYbvQatQzH-dw0X65h2nvXh1tiuiY&sz=w1000",
     link: "https://www.coursera.org/learn/python-data"
   },
   {
@@ -493,7 +493,7 @@ const CERTIFICATES = [
       bn: "ডঃ রবার্ট কোসারা",
       zh: "Robert Kosara 博士"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1qAiHHjgIZ0WmEKut9IUcgzuzhy75Uwya",
+    imageUrl: "https://drive.google.com/thumbnail?id=1qAiHHjgIZ0WmEKut9IUcgzuzhy75Uwya&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -518,7 +518,7 @@ const CERTIFICATES = [
       bn: "ডঃ রবার্ট কোসারা",
       zh: "Robert Kosara 博士"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1mc1BVVRUhNoNeN5yQE2IKSW980eALXr4",
+    imageUrl: "https://drive.google.com/thumbnail?id=1mc1BVVRUhNoNeN5yQE2IKSW980eALXr4&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -543,7 +543,7 @@ const CERTIFICATES = [
       bn: "টম ডার্চ, ম্যাট পাভলোভিচ, স্টেসি চিন",
       zh: "Tom Dursch, Matt Pavlovich, Stacey Chin"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1UPCNG-cIh2TIQD5HIpuztw4AE2Ab1uWu",
+    imageUrl: "https://drive.google.com/thumbnail?id=1UPCNG-cIh2TIQD5HIpuztw4AE2Ab1uWu&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -568,7 +568,7 @@ const CERTIFICATES = [
       bn: "র‍্যাচেল হার্বার্ট",
       zh: "Rachel Herbert"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1PNLCeZoCrFHtXVdkFA3aT1xIAxptZsuu",
+    imageUrl: "https://drive.google.com/thumbnail?id=1PNLCeZoCrFHtXVdkFA3aT1xIAxptZsuu&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -593,7 +593,7 @@ const CERTIFICATES = [
       bn: "এলিসেন্ডা অ্যাগুইলেরা-কোরা, ডগ ফেল্ডনার",
       zh: "Elisenda Aguilera-Cora, Doug Feldner"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1lfxKdXQeqQf_7xWX8V9arczu8x2-OcGe",
+    imageUrl: "https://drive.google.com/thumbnail?id=1lfxKdXQeqQf_7xWX8V9arczu8x2-OcGe&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -618,7 +618,7 @@ const CERTIFICATES = [
       bn: "জর্জ সিনভাল, ড্যানিয়েল ক্রিস্টে",
       zh: "Jorge Sinval, Daniel Christe"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=15a_m0_vjsBRgLJ6_vpknWZKwazeZrGeG",
+    imageUrl: "https://drive.google.com/thumbnail?id=15a_m0_vjsBRgLJ6_vpknWZKwazeZrGeG&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -643,7 +643,7 @@ const CERTIFICATES = [
       bn: "লন্ডা শিয়েবিঙ্গার, কারা ট্যানেনবাউম, হলি ফক ক্রজেসিনস্কি, জেসিকা মাইলস",
       zh: "Londa Schiebinger, Cara Tannenbaum, Holly Falk Krzesinski, Jessica Miles"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1rnSRf5DCXBpvn2BJd-y_KPWwmtGGenQr",
+    imageUrl: "https://drive.google.com/thumbnail?id=1rnSRf5DCXBpvn2BJd-y_KPWwmtGGenQr&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -668,7 +668,7 @@ const CERTIFICATES = [
       bn: "অ্যান্থনি নিউম্যান",
       zh: "Anthony Newman"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1cl0iHsuE08VCh6XR6q-KKVk9gCrQjY2T",
+    imageUrl: "https://drive.google.com/thumbnail?id=1cl0iHsuE08VCh6XR6q-KKVk9gCrQjY2T&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -693,7 +693,7 @@ const CERTIFICATES = [
       bn: "এলসেভিয়ার রিসার্চার একাডেমি",
       zh: "爱思唯尔研究员学院"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1J8Ul017mS9_Ukh9_CcXCDcuoVV7vcOrM",
+    imageUrl: "https://drive.google.com/thumbnail?id=1J8Ul017mS9_Ukh9_CcXCDcuoVV7vcOrM&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -718,7 +718,7 @@ const CERTIFICATES = [
       bn: "অ্যান্থনি নিউম্যান",
       zh: "Anthony Newman"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=12vXJICAo2YOxr9iIb_4pf4tKRgtIDlb0",
+    imageUrl: "https://drive.google.com/thumbnail?id=12vXJICAo2YOxr9iIb_4pf4tKRgtIDlb0&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -743,7 +743,7 @@ const CERTIFICATES = [
       bn: "হ্যানা ফোরম্যান",
       zh: "Hannah Foreman"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=15chYKCCxxCDnBqDI0mZ78vfoDhZivloy",
+    imageUrl: "https://drive.google.com/thumbnail?id=15chYKCCxxCDnBqDI0mZ78vfoDhZivloy&sz=w1000",
     link: "https://researcheracademy.elsevier.com/"
   },
   {
@@ -768,7 +768,7 @@ const CERTIFICATES = [
       bn: "তরুণ খান্না, করিম লাখানি",
       zh: "Tarun Khanna, Karim Lakhani"
     },
-    imageUrl: "https://drive.google.com/uc?export=download&id=1NfioKCyxaOsy9gF7HkXUQ97YtZv6aRPQ",
+    imageUrl: "https://drive.google.com/thumbnail?id=1NfioKCyxaOsy9gF7HkXUQ97YtZv6aRPQ&sz=w1000",
     link: "https://www.aspireleaders.org/"
   }
 ];
@@ -1190,17 +1190,17 @@ const CVPage = ({ onClose, lang }: { onClose: () => void, lang: Language }) => {
         
         <div className="bg-white shadow-2xl border border-slate-200 flex flex-col mx-auto">
           <img 
-            src="https://drive.google.com/uc?export=download&id=1OuTkymO7pKZadDjUkeXDyFlTtgpOwMLb" referrerPolicy="no-referrer" 
+            src="https://drive.google.com/thumbnail?id=1OuTkymO7pKZadDjUkeXDyFlTtgpOwMLb&sz=w2000" referrerPolicy="no-referrer" 
             alt="CV Page 1" 
             className="w-full h-auto block"
-            onError={(e) => { e.currentTarget.src = "https://drive.google.com/uc?export=view&id=1OuTkymO7pKZadDjUkeXDyFlTtgpOwMLb"; }}
+            onError={(e) => { e.currentTarget.src = "https://drive.google.com/uc?export=download&id=1OuTkymO7pKZadDjUkeXDyFlTtgpOwMLb"; }}
           />
           <div className="w-full h-px bg-slate-200"></div>
           <img 
-            src="https://drive.google.com/uc?export=download&id=1OS-DNjv1NI35xs-bUePXhk8LSuAb_Mhk" referrerPolicy="no-referrer" 
+            src="https://drive.google.com/thumbnail?id=1OS-DNjv1NI35xs-bUePXhk8LSuAb_Mhk&sz=w2000" referrerPolicy="no-referrer" 
             alt="CV Page 2" 
             className="w-full h-auto block"
-            onError={(e) => { e.currentTarget.src = "https://drive.google.com/uc?export=view&id=1OS-DNjv1NI35xs-bUePXhk8LSuAb_Mhk"; }}
+            onError={(e) => { e.currentTarget.src = "https://drive.google.com/uc?export=download&id=1OS-DNjv1NI35xs-bUePXhk8LSuAb_Mhk"; }}
           />
         </div>
       </div>
@@ -2474,7 +2474,7 @@ export default function App() {
                               <div className="border border-slate-200 overflow-hidden bg-white hover:shadow-xl transition-all duration-300 rounded-lg h-full flex flex-col">
                                 <div className="h-48 overflow-hidden shrink-0">
                                   <img 
-                                    src={cert.imageUrl} referrerPolicy="no-referrer" onError={(e) => { e.currentTarget.style.display = "none"; }} 
+                                    src={cert.imageUrl} referrerPolicy="no-referrer" onError={(e) => { e.currentTarget.src = cert.imageUrl.replace("thumbnail?id=", "uc?export=download&id=").split("&sz=")[0]; }} 
                                     alt={cert.title[lang]} 
                                     referrerPolicy="no-referrer"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
